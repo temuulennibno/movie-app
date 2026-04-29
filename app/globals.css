@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #fff;
+  color: #18181b;
 }
+.dark body {
+  background-color: #09090b;
+  color: #fafafa;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
