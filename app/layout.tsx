@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Header } from "./layout/header";
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} bg-white`}>
       <body>
         <ThemeProvider enableSystem={false} defaultTheme="light" attribute="class">
-          {children}
+          <>
+            <Header />
+            {children}
+          </>
         </ThemeProvider>
       </body>
     </html>
