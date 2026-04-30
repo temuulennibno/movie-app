@@ -23,10 +23,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} bg-white`}>
       <body>
         <ThemeProvider enableSystem={false} defaultTheme="light" attribute="class">
-          <>
-            <Header />
-            {children}
-          </>
+          <Header />
+          {children}
         </ThemeProvider>
       </body>
     </html>
